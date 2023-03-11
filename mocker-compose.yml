@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-  balena-hello-world:
+  autogrowpi:
     build: .
     ports:
       - "80:80"
