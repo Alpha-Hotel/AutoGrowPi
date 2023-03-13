@@ -1,1 +1,4 @@
 /env
+/Website/Assets/admin
+/__pycache__
+*/__pycache__
