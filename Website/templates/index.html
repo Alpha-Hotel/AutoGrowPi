@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AutoGrowPi</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+      
+      <div class="lightcard">
+        <div class="container">
+          <h4><b>Grow Light Status:</b></h4>
+          <p>Daylight hours set: {{grow_light.daylight_hours}}</p>
+          <p>Grow Light On: {{grow_light.on}}</p>
+          <p>Hours before toggle: {{grow_light.hours_left}}</p>
+          <p>Lumens: {{grow_light.lumens}}</p>
+        </div>
+      </div> 
+      <div class="moisturecard">
+        <div class="container">
+          <h4>Soil Moisture</h4>
+          <p>Average Soil Moisture: {{soil_moisture.average}}%</p>
+          <p>Lowest Moisture Level: {{soil_moisture.low}}%</p>
+          <p>Highest Moisture Level: {{soil_moisture.high}}%</p>
+          <p>Last Time Watered: {{soil_moisture.time}}</p>
+          <p>Water Tank Level: {{soil_moisture.tank_level}}%</p>
+        </div>
+      </div>
+      <div class="picard">
+        <div class="container">
+          <h4>Pi Status:</h4>
+          <p>Uptime: {{rpi_status.uptime}} hours</p>
+          <p>CPU: {{rpi_status.cpu}}%</p>
+        </div>
+      </div>
+  </body>
+</html>
