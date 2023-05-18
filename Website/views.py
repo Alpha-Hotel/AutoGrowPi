@@ -14,6 +14,16 @@ test = {'grow_light':
             'high':85, 
             'time':'Wed March 4 at 12:35 MDT', 
             'tank_level':55},
+        'ambient_data':{
+            'temperature': 75,
+            'tempurature_24_low': 60,
+            'temperature_24_high':80,
+            'light_level': 30,
+        },
+        'nutrients':{
+            'level':50,
+            'alarm':10,
+        },
         'rpi_status':{
             'uptime':127,
             'cpu': 35
@@ -26,3 +36,7 @@ def index(request):
     template = loader.get_template('index.html')
     context = test
     return HttpResponse(template.render(context,request))
+
+def config(request):
+    template = loader.get_template('config.html')
+    return HttpResponse(template.render())

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-      
+      <div class="config">
+        <input type="button" value="Alter Configuration" name="_config" onclick="location.href='config'">
+      </div>
       <div class="lightcard">
         <div class="container">
           <h4><b>Grow Light Status:</b></h4>
@@ -29,11 +31,27 @@
           <p>Water Tank Level: {{soil_moisture.tank_level}}%</p>
         </div>
       </div>
+      <div class="ambientcard">
+        <div class="container">
+          <h4>Ambient Information</h4>
+          <p>Temperature: {{ambient_data.temperature}} F°</p>
+          <p>24 Hour High Temperature: {{ambient_data.temperature_24_high}} F°</p>
+          <p>24 Hour Low Temperature: {{ambient_data.tempurature_24_low}} F°</p>
+          <p>Light Levels: {{ambient_data.light_level}} Lumens</p>
+        </div>
+      </div>
       <div class="picard">
         <div class="container">
           <h4>Pi Status:</h4>
           <p>Uptime: {{rpi_status.uptime}} hours</p>
           <p>CPU: {{rpi_status.cpu}}%</p>
+        </div>
+      </div>
+      <div class="nutrientscard">
+        <div class="container">
+          <h4>Water Nutrients</h4>
+          <p>Nutrients Level: {{nutrients.level}}%</p>
+          <p>Nutrients Alarm Level: {{nutrients.alarm}}%</p>
         </div>
       </div>
   </body>

@@ -21,5 +21,6 @@ import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('config', views.config, name='config')
     ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,7 +2,7 @@ body {
   background-color: rgb(66, 173, 148);
 }
 
-.lightcard, .moisturecard, .picard {
+.lightcard, .moisturecard, .picard, .ambientcard, .nutrientscard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
@@ -10,15 +10,24 @@ body {
     margin-left:20px;
     float: left;
   }
+.nutrientscard {
+  background-color: chocolate;
+}
 
 .lightcard {
   background-color: palegreen;
 }  
+.ambientcard {
+  background-color:indianred ;
+}
 .moisturecard {
   background-color: paleturquoise;
 }
 .picard{
   background-color: palegoldenrod;
+}
+.nutrientscard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .lightcard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -26,7 +35,17 @@ body {
 .moisturecard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.ambientcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.picard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 .container {
   padding: 4px 16px;
   max-width: fit-content;
+}
+.config {
+  position:relative;
+  left:20px;
 }
