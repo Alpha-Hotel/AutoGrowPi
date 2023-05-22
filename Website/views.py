@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 import os
+from forms import AlarmForm
+import text_messaging
 
 test = {'grow_light':
             {'on':'No', 
@@ -38,5 +40,11 @@ def index(request):
     return HttpResponse(template.render(context,request))
 
 def config(request):
-    template = loader.get_template('config.html')
-    return HttpResponse(template.render())
+    if request.method == "POST":
+        form = AlarmForm(request.POST)
+        print(request.POST.__getitem__("cellphone"), request.POST.__getitem__("cellphone_carrier"))
+        text_messaging.test_message(request.POST.__getitem__("cellphone"), request.POST.__getitem__("cellphone_carrier"))
+        return HttpResponseRedirect("/")
+    else:
+        form = AlarmForm()
+        return render(request, "config.html", {'form':form})

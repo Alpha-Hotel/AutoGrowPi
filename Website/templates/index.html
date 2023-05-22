@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
+      {% csrf_token %}
       <div class="config">
         <input type="button" value="Alter Configuration" name="_config" onclick="location.href='config'">
       </div>
