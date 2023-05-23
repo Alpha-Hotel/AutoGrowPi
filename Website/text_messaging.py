@@ -9,6 +9,5 @@ def test_message(phone_number, carrier):
     server.login(auth[0], auth[1])
     server.sendmail(auth[0], recipient, "This is a messages testing the automatic alarm messaging system.")
 
-
 if __name__ == "__main__":
     test_message("8452393910","@tmomail.net")

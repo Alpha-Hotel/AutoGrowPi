@@ -1,18 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AutoGrowPi</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
+{% extends "base.html" %}
+{%block content%}
       {% csrf_token %}
-      <div class="config">
-        <input type="button" value="Alter Configuration" name="_config" onclick="location.href='config'">
-      </div>
       <div class="lightcard">
         <div class="container">
           <h4><b>Grow Light Status:</b></h4>
@@ -55,5 +43,4 @@
           <p>Nutrients Alarm Level: {{nutrients.alarm}}%</p>
         </div>
       </div>
-  </body>
-</html>
+  {%endblock content%}

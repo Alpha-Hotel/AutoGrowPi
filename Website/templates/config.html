@@ -1,20 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AutoGrowPi</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
-    <div class="form_container">
-      <form action="/config" method="post">
-      {% csrf_token %}
-      {{ form }}
-      <input type="submit" value="Submit"/>
-      </form>
-    </div>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  {% csrf_token %}
+  <div class="form_container">
+    <form action="/config" method="post">
+    {{ form }}
+    <input class="sub" type="submit" value="Submit"/>
+    </form>
+  </div>
+{% endblock content %} 

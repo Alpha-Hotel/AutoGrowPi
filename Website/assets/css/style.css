@@ -1,8 +1,10 @@
+
+
 body {
   background-color: rgb(66, 173, 148);
 }
 
-.lightcard, .moisturecard, .picard, .ambientcard, .nutrientscard {
+.lightcard, .moisturecard, .picard, .ambientcard, .nutrientscard{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
@@ -52,6 +54,7 @@ body {
   height: 10vh;
 }
 .form_container {
+  margin-top: 10%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: lightgray;
 }
@@ -63,4 +66,18 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.navbar{
+  margin-left: 40%;
+  margin-right:40%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: darkgreen;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  width: fit-content;
+}
+a:link, a:visited {
+  color:aliceblue;
 }
