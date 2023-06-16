@@ -1,5 +1,3 @@
-
-
 body {
   background-color: rgb(66, 173, 148);
 }
@@ -10,6 +8,7 @@ body {
     border-radius: 5px; /* 5px rounded corners */
     max-width: fit-content;
     margin-left:20px;
+    margin-top: 2%;
     float: left;
   }
 .nutrientscard {
@@ -54,12 +53,15 @@ body {
   height: 10vh;
 }
 .form_container {
-  margin-top: 10%;
+  margin-top: 2%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: lightgray;
+  width: 14%;
+  border-radius: 5px;
+  padding: 5px;
 }
 input, select {
-  width: 10%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -68,15 +70,18 @@ input, select {
   box-sizing: border-box;
 }
 
+.formbody, .navcontainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .navbar{
-  margin-left: 40%;
-  margin-right:40%;
-  margin-bottom: 15px;
   padding: 10px;
   background-color: darkgreen;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   border-radius: 5px;
-  width: fit-content;
+
 }
 a:link, a:visited {
   color:aliceblue;

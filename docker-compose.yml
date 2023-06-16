@@ -8,4 +8,5 @@ services:
       - 8000:8000
   autogrowpi:
     build: .
-    command: python /src/AutoGrowPi.py
+    privileged: true
+    command: python AutoGrowPi.py

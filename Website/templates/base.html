@@ -8,12 +8,14 @@
     <title>AutoGrowPi</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
-  
+  {% csrf_token %}
   <body>
-    <nav class= "navbar">
-      <a href="{% url 'index' %}">Home</a>
-      <a href="{% url 'config' %}">Configuration</a>
-    </nav>
+    <div class="navcontainer"> 
+      <nav class= "navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'config' %}">Configuration</a>
+      </nav>
+    </div>
     {% block content %}
     {% endblock content %}
   </body>
